@@ -12,7 +12,9 @@
   "workspaces": {
     "packages": [
       "shell",
-      "aside"
+      "aside",
+      "main",
+      "header"
     ]
   }
 }

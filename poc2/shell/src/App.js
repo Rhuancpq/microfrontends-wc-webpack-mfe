@@ -39,7 +39,7 @@ const AsideMicrofrontend = {
 
 const MainMicrofrontend = {
   remote: "MainMicrofrontend",
-  url: "http://localhost:3003/bundle.js",
+  url: "http://localhost:4201/bundle.js",
   module: "./Microfrontend",
   tag: "main-microfrontend",
 };
