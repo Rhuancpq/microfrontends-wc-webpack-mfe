@@ -9,18 +9,27 @@ function System(props) {
   } = props;
 
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     if (remote && url && module)
-      loadComponent(remote, "default", module, url)().then(() => {
-        setLoading(false);
-      });
+      loadComponent(remote, "default", module, url)()
+        .then(() => {
+          setLoading(false);
+        })
+        .catch(() => {
+          setError(true);
+        });
 
     return () => {};
   }, [remote, url, module]);
 
   if (!system || !remote || !url || !module) {
     return <h2>Nenhum microfrontend especificado</h2>;
+  }
+
+  if (error) {
+    return <h2>O componente remoto não pôde ser carregado</h2>;
   }
 
   if (loading) {
