@@ -59,7 +59,7 @@ function App() {
           '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
       }}
     >
-      <div className="header">
+      <div>
         <System system={HeaderMicrofrontend} />
       </div>
       <h1 className="title">Prova de Conceito 2</h1>

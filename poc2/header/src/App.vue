@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h3>Vue Microfrontend</h3>
     <header-component></header-component>
   </div>
 </template>

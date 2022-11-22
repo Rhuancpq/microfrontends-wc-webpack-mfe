@@ -6,12 +6,6 @@ body {
   margin-left: 16px;
 }
 
-.header {
-  background-color: palegreen;
-  height: 60px;
-  width: 100%;
-}
-
 .box {
   width: calc(100% - 32px);
   padding: 16px;
