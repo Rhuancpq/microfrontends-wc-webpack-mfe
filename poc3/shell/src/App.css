@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+}
+
+.title {
+  margin-left: 16px;
+}
+
+.box {
+  width: calc(100% - 32px);
+  padding: 16px;
+  display: inline-flex;
+  height: 50%;
+}
+
+.aside-box {
+  width: 40%;
+  background-color: azure;
+  padding: 8px;
+}
+
+.main-box {
+  flex: 1;
+  margin-right: 16px;
+  background-color: thistle;
+  padding: 8px;
+}
