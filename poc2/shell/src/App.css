@@ -10,7 +10,7 @@ body {
   width: calc(100% - 32px);
   padding: 16px;
   display: inline-flex;
-  height: 70%;
+  height: 50%;
 }
 
 .aside-box {
