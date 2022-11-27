@@ -80,9 +80,25 @@ function App() {
           <System system={AsideMicrofrontend} />
         </div>
       </div>
-      {/* <div style={{ marginTop: "2em" }}>
-        <System system={system} />
-      </div> */}
+      <div
+        dangerouslySetInnerHTML={{
+          __html: `<template id="teste">
+        <p>
+          In sollicitudin felis dui, ac rutrum arcu aliquam at. Cras sit amet
+          sodales enim, ac maximus justo. Sed pretium mauris augue, in sagittis
+          ipsum consequat in. Integer nec consectetur ante. Phasellus tempus,
+          ligula et egestas luctus, lectus neque fringilla odio, at dignissim
+          erat purus sit amet enim. Vestibulum sagittis consectetur nisl, et
+          aliquam leo pulvinar ut. In venenatis imperdiet augue et aliquet. Cras
+          rhoncus fringilla ante nec pulvinar. Quisque sollicitudin sem rutrum,
+          semper ligula at, maximus dolor. Proin volutpat dolor sit amet nunc
+          sodales, at pharetra leo luctus. Curabitur fringilla pellentesque
+          ullamcorper. Duis sit amet urna feugiat, ultricies nulla non, tempus
+          ipsum. Nam ut dui sapien.
+        </p>
+      </template>`,
+        }}
+      />
     </div>
   );
 }
