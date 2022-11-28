@@ -33,6 +33,13 @@ module.exports = (env = {}) => ({
       {
         test: /\.css$/,
         use: [
+          // {
+          //   loader: "style-loader",
+          //   options: {
+          //     injectType: "linkTag",
+          //     attributes: { id: "footer-style" },
+          //   },
+          // },
           {
             loader: MiniCssExtractPlugin.loader,
             options: {},
@@ -45,16 +52,13 @@ module.exports = (env = {}) => ({
   plugins: [
     new MiniCssExtractPlugin({
       filename: "[name].css",
-      insert: (linkTag) => {
-        linkTag.setAttribute("id", "footer-style");
-        document.head.appendChild(linkTag);
-      },
+      attributes: { id: "footer-style" },
     }),
     new ModuleFederationPlugin({
       name: "FooterMicrofrontend",
       filename: "bundle.js",
       exposes: {
-        "./Microfrontend": "./src/WebComponent.js",
+        "./Microfrontend": "./src/FooterMicrofrontend.js",
       },
     }),
     new HtmlWebpackPlugin({
@@ -66,7 +70,7 @@ module.exports = (env = {}) => ({
       directory: path.join(__dirname),
     },
     compress: true,
-    port: 3004,
+    port: 3005,
     hot: true,
     headers: {
       "Access-Control-Allow-Origin": "*",

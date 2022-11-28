@@ -1,0 +1,17 @@
+footer {
+  background-color: lightgoldenrodyellow;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  width: 100%;
+}
+
+.section {
+  flex: 1;
+}
+
+.item {
+  padding: 4px;
+}
