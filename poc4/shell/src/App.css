@@ -4,13 +4,15 @@ body {
 
 .title {
   margin-left: 16px;
+  margin-top: 16px;
+  line-height: 1;
 }
 
 .box {
   width: calc(100% - 32px);
   padding: 16px;
   display: inline-flex;
-  height: 50%;
+  height: calc(100vh - 284px);
 }
 
 .aside-box {

@@ -60,18 +60,26 @@ const HeaderMicrofrontend = {
   tag: "header-microfrontend",
 };
 
+const FooterMicrofrontend = {
+  remote: "FooterMicrofrontend",
+  url: "http://localhost:3005/bundle.js",
+  module: "./Microfrontend",
+  tag: "footer-microfrontend",
+};
+
 function App() {
   return (
     <div
       style={{
         fontFamily:
           '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+        height: "100vh",
       }}
     >
       <div>
         <System system={HeaderMicrofrontend} />
       </div>
-      <h1 className="title">Prova de Conceito 3</h1>
+      <h1 className="title">Prova de Conceito 4</h1>
       <div className="box">
         <div className="main-box">
           <System system={MainMicrofrontend} />
@@ -80,25 +88,9 @@ function App() {
           <System system={AsideMicrofrontend} />
         </div>
       </div>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `<template id="teste">
-        <p>
-          In sollicitudin felis dui, ac rutrum arcu aliquam at. Cras sit amet
-          sodales enim, ac maximus justo. Sed pretium mauris augue, in sagittis
-          ipsum consequat in. Integer nec consectetur ante. Phasellus tempus,
-          ligula et egestas luctus, lectus neque fringilla odio, at dignissim
-          erat purus sit amet enim. Vestibulum sagittis consectetur nisl, et
-          aliquam leo pulvinar ut. In venenatis imperdiet augue et aliquet. Cras
-          rhoncus fringilla ante nec pulvinar. Quisque sollicitudin sem rutrum,
-          semper ligula at, maximus dolor. Proin volutpat dolor sit amet nunc
-          sodales, at pharetra leo luctus. Curabitur fringilla pellentesque
-          ullamcorper. Duis sit amet urna feugiat, ultricies nulla non, tempus
-          ipsum. Nam ut dui sapien.
-        </p>
-      </template>`,
-        }}
-      />
+      <div>
+        <System system={FooterMicrofrontend} />
+      </div>
     </div>
   );
 }
