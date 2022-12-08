@@ -45,7 +45,6 @@ module.exports = {
         {
           react: { singleton: true },
           "react-dom": { singleton: true },
-          moment: { singleton: true },
         },
       ],
     }),
