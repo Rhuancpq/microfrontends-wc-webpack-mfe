@@ -6,6 +6,11 @@ body {
   margin-left: 16px;
 }
 
+.app-container {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
 .box {
   width: calc(100% - 32px);
   padding: 16px;

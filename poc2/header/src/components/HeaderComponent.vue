@@ -10,16 +10,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      title: "Header works",
-    };
-  },
-};
-</script>
-
 <style scoped>
 .header {
   background-color: palegreen;
