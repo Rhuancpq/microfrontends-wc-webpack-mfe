@@ -57,9 +57,8 @@ module.exports = (env = {}) => ({
   plugins: [
     new MiniCssExtractPlugin({
       filename: "[name].css",
-      insert: (linkTag) => {
-        linkTag.setAttribute("id", "header-style");
-        document.head.appendChild(linkTag);
+      attributes: {
+        id: "header-style",
       },
     }),
     new ModuleFederationPlugin({

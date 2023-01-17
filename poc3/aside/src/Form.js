@@ -15,14 +15,11 @@ function Form() {
     setIsShellContent((old) => !old);
   }, []);
 
-  const shellContent = useCallback(() => {
+  const loadShellContent = useCallback(() => {
     const shellContent = document.getElementById("shell-aside-content");
     if (shellContent) {
       const fragment = shellContent.content.cloneNode(true);
       let fragmentChilds = fragment.childNodes.length;
-
-      console.log("fragmentChilds", fragmentChilds);
-      console.log(fragment.firstChild);
 
       while (fragmentChilds-- > 1) {
         rootDiv.current.appendChild(fragment.firstChild);
@@ -32,7 +29,7 @@ function Form() {
 
   useEffect(() => {
     if (isShellContent) {
-      shellContent();
+      loadShellContent();
     }
   }, [isShellContent]);
 

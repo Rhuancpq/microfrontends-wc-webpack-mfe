@@ -21,9 +21,6 @@ function Form() {
       const fragment = shellContent.content.cloneNode(true);
       let fragmentChilds = fragment.childNodes.length;
 
-      console.log("fragmentChilds", fragmentChilds);
-      console.log(fragment.firstChild);
-
       while (fragmentChilds-- > 1) {
         rootDiv.current.appendChild(fragment.firstChild);
       }
